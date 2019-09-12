@@ -1,4 +1,5 @@
-package br.usjt.demo.controller;
+package br.usjt.previsao.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,27 +7,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.usjt.demo.model.PrevisaoTempo;
-import br.usjt.demo.repository.prevRepository;
+import br.usjt.previsao.model.PrevTempo;
+import br.usjt.previsao.repository.PrevRepository;
 
 public class PrevController {
 	@Autowired
-	private prevRepository previsao;
-	@GetMapping("/prev")
+	private PrevRepository previsaoRepo;
+
+	@GetMapping("/")
 	public ModelAndView listarPrev() {
 		ModelAndView mv = new ModelAndView("index.html");
-		mv.addObject(new PrevisaoTempo());
-		//List <PrevisaoTempo> 
-		List<PrevisaoTempo> prev = previsao.findAll();
+		mv.addObject(new PrevTempo());
+		List<PrevTempo> prev = previsaoRepo.findAll();
 		mv.addObject("prev", prev);
-		mv.addObject(new PrevisaoTempo());
-		
+		mv.addObject(new PrevTempo());
+
 		return mv;
 	}
+/* MÉTODO PARA RETORNAR A PÁGINA INICIAL
 	@PostMapping
-	public String salvar (PrevisaoTempo previsao) {
-		//previsao.save(prev);
+	public String salvar(PrevTempo previsao) {
+		// PrevRepo.save(prev);
 		return "redirect:/index";
 	}
-	
+*/
 }
