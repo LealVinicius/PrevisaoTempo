@@ -12,7 +12,7 @@ public class PrevController {
 	@Autowired
 	private PrevService prevservice;
 
-	@GetMapping("/previsao")
+	@GetMapping(value = "/previsao")
 	public ModelAndView listarPrev() {
 		ModelAndView mv = new ModelAndView("index.html");
 		mv.addObject(new PrevTempo());
