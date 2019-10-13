@@ -10,18 +10,23 @@
 
 <title>Previsão do tempo</title>
 </head>
-		<form class="form-inline" method="POST" th:object="${previsao}"
-				th:action="@{/index}" style="margin: 20px 0">
-			</form>
+
 <body>
+	<form class="form-inline" method="post" th:object="${previsao}"
+				th:action="@{/index}" style="margin: 20px 0">	
+			</form>
+
 	<table class="table">
 		<thead>
-			<tr>
+			<tr>			
 				<th scope="col">Dia</th>
-				<th scope="col">Previsão do tempo</th>
 				<th scope="col">Temp. Mínima</th>
 				<th scope="col">Temp. Máxima</th>
 				<th scope="col">Humidade</th>
+				<th scope="col">Descrição</th>
+				<th scope="col">Data</th>
+				<th scope="col">latitude</th>
+				<th scope="col">Longitude</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -31,6 +36,9 @@
 				<td th:text="${previsao.maxima}"></td>
 				<td th:text="${previsao.humidade}"></td>
 				<td th:text="${previsao.descri}"></td>
+				<td th:text="${previsao.data}"></td>
+				<td th:text="${previsao.latitude}"></td>
+				<td th:text="${previsao.longitude}"></td>
 			</tr>
 		</tbody>
 	</table>
