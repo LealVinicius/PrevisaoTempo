@@ -16,6 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
+
 public class PrevTempo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id

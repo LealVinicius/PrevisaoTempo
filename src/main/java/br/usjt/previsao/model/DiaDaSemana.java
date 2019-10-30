@@ -10,16 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DiaDaSemana {
-	@OneToOne
+	@OneToOne(optional=false)
 	private PrevTempo prev;
-	
-	public PrevTempo getPrev(){
-		return prev;
-	}
-	public void setPrev(PrevTempo prev) {
-		this.prev = prev;
-	}
-	
-	
 	private String dia;
 }
