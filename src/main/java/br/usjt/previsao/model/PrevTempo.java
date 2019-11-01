@@ -31,6 +31,133 @@ public class PrevTempo implements Serializable {
 	private int latitude;
 	private int longitude;
 	
+	
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+
+	public String getDia() {
+		return dia;
+	}
+
+
+
+
+	public void setDia(String dia) {
+		this.dia = dia;
+	}
+
+
+
+
+	public int getMinima() {
+		return minima;
+	}
+
+
+
+
+	public void setMinima(int minima) {
+		this.minima = minima;
+	}
+
+
+
+
+	public int getMaxima() {
+		return maxima;
+	}
+
+
+
+
+	public void setMaxima(int maxima) {
+		this.maxima = maxima;
+	}
+
+
+
+
+	public int getHumidade() {
+		return humidade;
+	}
+
+
+
+
+	public void setHumidade(int humidade) {
+		this.humidade = humidade;
+	}
+
+
+
+
+	public String getDescri() {
+		return descri;
+	}
+
+
+
+
+	public void setDescri(String descri) {
+		this.descri = descri;
+	}
+
+
+
+
+	public Date getData() {
+		return data;
+	}
+
+
+
+
+	public void setData(Date data) {
+		this.data = data;
+	}
+
+
+
+
+	public int getLatitude() {
+		return latitude;
+	}
+
+
+
+
+	public void setLatitude(int latitude) {
+		this.latitude = latitude;
+	}
+
+
+
+
+	public int getLongitude() {
+		return longitude;
+	}
+
+
+
+
+	public void setLongitude(int longitude) {
+		this.longitude = longitude;
+	}
+
+
 
 
 	public static long getSerialversionuid() {
