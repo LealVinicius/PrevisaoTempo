@@ -3,22 +3,20 @@ package br.usjt.previsao.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 import lombok.Getter;
 import lombok.Setter;
 
 
-/*
-  2. As previsões pertencem a cidades. 
-  Há um relacionamento de 1 para N entre cidade e
-  previsões.
-
-   */
-
 @Entity
 @Getter
 @Setter
+@NamedQuery (name= "Cidade.buscarPorNome" , query = "SELECT a FROM Cidade a WHERE nome = :nome")
+@NamedQuery (name= "Cidade.buscarPorLatitudeELongitude" , query = "SELECT a FROM Cidade a WHERE latitude = :latitude AND "
+		+ "longitude =: longitude"  )
+
 public class Cidade {
 	@Id
 	@GeneratedValue
