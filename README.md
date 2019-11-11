@@ -7,6 +7,7 @@ Utilizando as tecnologias:
 - MySQL
 - HTML
 - CSS
+- Booststrap
 
 O Objetivo é criar um sistema que informe a previsão do tempo de acordo com o dia, e a cidade selecionada consumindo informações via 
 REST.
