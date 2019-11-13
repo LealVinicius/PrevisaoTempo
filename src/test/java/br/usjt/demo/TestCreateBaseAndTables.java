@@ -4,7 +4,7 @@ import javax.persistence.Persistence;
 
 public class TestCreateBaseAndTables {
 	public static void main(String[] args) {
-		Persistence.createEntityManagerFactory("prev_tempo");
+		Persistence.createEntityManagerFactory("previsao");
 		}
 
 }

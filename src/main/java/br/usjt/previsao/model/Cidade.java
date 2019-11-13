@@ -1,5 +1,7 @@
 package br.usjt.previsao.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,13 +23,24 @@ public class Cidade {
 	@Id
 	@GeneratedValue
 	@OneToMany (mappedBy= "cidade")
+	//private List<PrevTempo> previsao;
 	private PrevTempo previsao;
+	
+	/* 2. As previsões pertencem a cidades. Há um relacionamento de 1 para N entre cidade e
+previsões. Faça o mapeamento com as anotações da JPA.
+*/
 	private int id;
 	private String nome;
 	private String latitude;
 	private String longitude;
 	
 	
+	public PrevTempo getPrevisao() {
+		return previsao;
+	}
+	public void setPrevisao(PrevTempo previsao) {
+		this.previsao = previsao;
+	}
 	public int getId() {
 		return id;
 	}
