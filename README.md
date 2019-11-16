@@ -12,3 +12,5 @@ Utilizando as tecnologias:
 
 O Objetivo é criar um sistema que informe a previsão do tempo de acordo com o dia, e a cidade selecionada consumindo informações via 
 REST.
+
+Executar o SQL Script: SET GLOBAL time_zone = '+4:00';
