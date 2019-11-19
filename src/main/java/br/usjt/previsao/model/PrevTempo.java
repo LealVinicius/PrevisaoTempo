@@ -13,20 +13,19 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="prev_tempo")
+@Table
 @Getter
 @Setter
-
 
 public class PrevTempo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	
 	@ManyToOne
-	private Cidade cidade;
+	Cidade cidade;
 	
-	private int id;
 	private String dia;
 	private int minima;
 	private int maxima;
@@ -42,7 +41,7 @@ public class PrevTempo implements Serializable {
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {
