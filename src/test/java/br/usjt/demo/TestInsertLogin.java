@@ -12,7 +12,7 @@ public class TestInsertLogin {
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		Usuario a = new Usuario();
-		a.setLogin("admin");
+		a.setLogin("Fulano de tal");
 		a.setSenha("123");
 		manager.persist(a);
 		transaction.commit();

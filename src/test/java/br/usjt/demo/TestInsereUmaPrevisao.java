@@ -9,7 +9,7 @@ public class TestInsereUmaPrevisao {
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		PrevTempo p = new PrevTempo();
-		p.setDia("Terça-Feira");
+		p.setDia("Quarta-Feira");
 		p.setMinima(89);
 		p.setMaxima(12);
 		p.setHumidade(23);

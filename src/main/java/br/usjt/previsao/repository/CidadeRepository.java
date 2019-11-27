@@ -1,5 +1,6 @@
 package br.usjt.previsao.repository;
 
+import java.util.List;
 import java.util.concurrent.Future;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,9 +11,8 @@ import br.usjt.previsao.model.Cidade;
 public interface CidadeRepository extends JpaRepository<Cidade, Long>{
 	@Async
 	public Future <Cidade> findByNomeContainingIgnoreCase (String nome);
-	
-	
 	public Cidade findOneByLatitudeAndLongitude(String Latitude, String Longitude);
+	public Future<List<Cidade>> findByNome(String nome);
 
 	
 	
