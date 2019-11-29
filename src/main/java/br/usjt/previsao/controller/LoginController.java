@@ -15,7 +15,7 @@ public class LoginController {
 	@Autowired
 	private UsuarioService loginService;
 
-	@GetMapping(value = { "/login", "/" })
+	@GetMapping(value = {"/login", "/" })
 	public ModelAndView login() {
 		ModelAndView mv = new ModelAndView("login");
 		mv.addObject(new Usuario());
@@ -26,10 +26,10 @@ public class LoginController {
 	public String fazerLogin(HttpServletRequest request, Usuario usuario) {
 		if (loginService.logar(usuario)) {
 			request.getSession().setAttribute("usuarioLogado", usuario);
-			return "redirect:index";
-		} else {
-			return "login";
-		}
+			return "redirect:/index";
+		} 
+		return "/login";
+		
 	}
 
 }

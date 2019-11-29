@@ -9,6 +9,8 @@ import javax.persistence.Id;
 //import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,6 +31,7 @@ public class Cidade {
 	private String latitude;
 	private String longitude;
 	
+	@JsonIgnore
 	@OneToMany (mappedBy= "cidade")
 	 List<PrevTempo> previsao;
 	
